@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo"/>
-    <script type="text/javascript" src="dist/bundle.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -96,25 +98,7 @@
       </div>
     </section>
 
-    <section class="sectionTWO section--alignCentered section--description">
-      <div class="projectWrapper">
-        <div class="project">
-          <h1 class="project-title">Project Name</h1>
-        </div>
-      </div>
-
-      <div class="projectWrapper">
-        <div class="project">
-          <h1 class="project-title">Project Name</h1>
-        </div>
-      </div>
-
-      <div class="projectWrapper">
-        <div class="project">
-          <h1 class="project-title">Project Name</h1>
-        </div>
-      </div>
-    </section>
+    <div id="example-work"></div>
 
     <section class="background--skyBlue sectionTWO section--description section--alignCentered">
       <h2>Certifications</h2>
@@ -180,5 +164,6 @@
     </section>
 
     </div>
+    <script type="text/javascript" src="dist/bundle.js"></script>
   </body>
 </html>
