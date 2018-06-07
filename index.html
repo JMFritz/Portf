@@ -19,9 +19,10 @@
 
                 var name = $("#name").val(),
                     email = $("#email").val(),
+                    phone =$("#phone").val(),
                     subject = $("#subject").val(),
                     message = $("#message").val(),
-                    fullMessage = name + " \n" + email + "\n\nSubmitted the following: \n" + message;
+                    fullMessage = name + " \n" + email + " \n" + phone + "\n\nSubmitted the following: \n" + message;
 
                 $.ajax({
                     type: "POST",
@@ -39,7 +40,7 @@
                         $('#form-response').text('Error.');
                     }
                 });
-
+                document.getElementById("myForm").reset();
             })
 
         });
@@ -135,18 +136,46 @@
     </section>
 
     <section class="section section--alignCentered section--description">
-      <h2>Contact Me</h2>
-      <form>
-        <label for="name">Your Name:</label>
-        <input id="name" required>
-        <label for="email">Email:</label>
-        <input id="email" type="email" required>
-        <label for="subject">Subject:</label>
-        <input id="subject" required>
-        <label for="message">Message</label>
-        <textarea id="message" required></textarea>
-        <button id="submit">Submit</button>
-      </form>
+      <div class="contact-info">
+        <h1 class="brand">Get in Touch</h1>
+        <div class="wrapper">
+          <div class="my-info">
+            <h3>Jun Marcel Fritz</h3>
+            <ul>
+              <li><i class="fa fa-road"></i> Address Street</li>
+              <li><i class="fa fa-phone"></i> (808) 722- 6686</li>
+              <li><i class="fa fa-envelope"></i> jun.fritz@gmail.com</li>
+            </ul>
+          </div>
+          <div class="contact">
+            <form id="myForm">
+              <p>
+                <label for="name">Name</label>
+                <input id="name" required>
+              </p>
+              <p>
+                <label for="email">Email</label>
+                <input id="email" type="email" required>
+              </p>
+              <p>
+                <label for="subject">Subject</label>
+                <input id="subject" required>
+              </p>
+              <p>
+                <label for="phone">Phone Number</label>
+                <input id="phone" required>
+              </p>
+              <p class="full">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+              </p>
+              <p class="full">
+                <button id="submit">Submit</button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
       <div id="form-response"></div>
     </section>
 
