@@ -1,0 +1,9 @@
+
+
+curl --request POST \
+  --url https://93xfridwth.execute-api.us-east-1.amazonaws.com/production/submit \
+  --header 'content-type: application/json' \
+  --data '{
+ "subject": "Hello",
+ "body": "Hoge"
+}'

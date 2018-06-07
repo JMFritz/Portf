@@ -9,6 +9,39 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo"/>
+    <script type="text/javascript" src="dist/bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#submit").click(function(e) {
+                e.preventDefault();
+
+                var subject = $("#subject").val(),
+                    email = $("#email").val(),
+                    message = $("#message").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: 'https://93xfridwth.execute-api.us-east-1.amazonaws.com/production/submit',
+                    contentType: 'application/json',
+                    crossDomain: true,
+                    data: JSON.stringify({
+                        'subject': subject,
+                        'body': message
+                    }),
+                    success: function(res){
+                        $('#form-response').text('Email was sent.');
+                    },
+                    error: function(){
+                        $('#form-response').text('Error.');
+                    }
+                });
+
+            })
+
+        });
+    </script>
   </head>
 
   <body>
@@ -54,32 +87,33 @@
       </ul>
     </main>
 
-    <section class="background--skyBlue section">
-      <div class="color--cloud margin--none section__summary">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </section>
-    <section class="section section--alignCentered section--description">
-      <div class="section__exampleWrapper">
-        <div class="section__example">
-          <h1 class="project-title">Project Name</h1>
-        </div>
-      </div>
-
-      <div class="section__exampleWrapper">
-        <div class="section__example">
-          <h1 class="project-title">Project Name</h1>
-        </div>
-      </div>
-
-      <div class="section__exampleWrapper">
-        <div class="section__example">
-          <h1 class="project-title">Project Name</h1>
-        </div>
+    <section class="background--skyBlue sectionTHREE">
+      <div class="margin--none section__summary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
       </div>
     </section>
 
-    <section class="background--skyBlue section section--description section--alignCentered">
+    <section class="sectionTWO section--alignCentered section--description">
+      <div class="projectWrapper">
+        <div class="project">
+          <h1 class="project-title">Project Name</h1>
+        </div>
+      </div>
+
+      <div class="projectWrapper">
+        <div class="project">
+          <h1 class="project-title">Project Name</h1>
+        </div>
+      </div>
+
+      <div class="projectWrapper">
+        <div class="project">
+          <h1 class="project-title">Project Name</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="background--skyBlue sectionTWO section--description section--alignCentered">
       <h2>Certifications</h2>
     </section>
 
@@ -87,27 +121,14 @@
       <h2>Contact Me</h2>
     </section>
 
-    <div class="background--skyBlue modal--closed">
-      <span class="color--cloud modal__closeButton">
-        <i class="fa fa-window-close-o"></i>
-      </span>
-      <img alt="example screenshot of a project involving code"
-           class="modal__image"
-           src="images/example1.png"/>
-      <div class="color--cloud modal__text">
-        <h2 class="modal__title">
-          Work Example Name
-        </h2>
-        <a class="color--skyBlue modal__link"
-           href="#">
-          Check it out
-        </a>
-        <p class="modal__description">
-          A long description of the work in question.
-        </p>
-      </div>
     </div>
-    </div>
-    <script type="text/javascript" src="dist/bundle.js"></script>
+    <form>
+        <label for="subject">Subject</label>
+        <input id="subject" type="email" required>
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+        <button id="submit">Submit</button>
+    </form>
+    <div id="form-response"></div>
   </body>
 </html>
