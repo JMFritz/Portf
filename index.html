@@ -17,9 +17,11 @@
             $("#submit").click(function(e) {
                 e.preventDefault();
 
-                var subject = $("#subject").val(),
+                var name = $("#name").val(),
                     email = $("#email").val(),
-                    message = $("#message").val();
+                    subject = $("#subject").val(),
+                    message = $("#message").val(),
+                    fullMessage = name + " \n" + email + "\n\nSubmitted the following: \n" + message;
 
                 $.ajax({
                     type: "POST",
@@ -28,7 +30,7 @@
                     crossDomain: true,
                     data: JSON.stringify({
                         'subject': subject,
-                        'body': message
+                        'body': fullMessage
                     }),
                     success: function(res){
                         $('#form-response').text('Email was sent.');
@@ -115,20 +117,39 @@
 
     <section class="background--skyBlue sectionTWO section--description section--alignCentered">
       <h2>Certifications</h2>
+      <div class="certsWrapper">
+        <div class="certs">
+          <img class="badge" src="images/SABadge.png" alt="AWS Solution Architect">
+        </div>
+      </div>
+      <div class="certsWrapper">
+        <div class="certs">
+          <img class="badge" src="images/SysOpsBadge.png" alt="AWS SysOps Admin">
+        </div>
+      </div>
+      <div class="certsWrapper">
+        <div class="certs">
+          <img class="badge" src="images/DevBadge.png" alt="AWS Developer">
+        </div>
+      </div>
     </section>
 
     <section class="section section--alignCentered section--description">
       <h2>Contact Me</h2>
-    </section>
-
-    </div>
-    <form>
-        <label for="subject">Subject</label>
-        <input id="subject" type="email" required>
+      <form>
+        <label for="name">Your Name:</label>
+        <input id="name" required>
+        <label for="email">Email:</label>
+        <input id="email" type="email" required>
+        <label for="subject">Subject:</label>
+        <input id="subject" required>
         <label for="message">Message</label>
         <textarea id="message" required></textarea>
         <button id="submit">Submit</button>
-    </form>
-    <div id="form-response"></div>
+      </form>
+      <div id="form-response"></div>
+    </section>
+
+    </div>
   </body>
 </html>
