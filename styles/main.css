@@ -1,6 +1,9 @@
 .background--skyBlue {
   background-color: rgba(52, 152, 219,0.1);
 }
+.background--modal {
+  background-color: black;
+}
 .color--skyBlue {
   color: rgb(52, 152, 219);
 }
