@@ -3,16 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Jun Marcel Fritz: Part I</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css"/>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo"/>
     <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
     <script type="text/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
 
@@ -49,87 +50,116 @@
     </script>
   </head>
 
-  <body>
-    <div class="container">
-      <main class="overflow--auto">
-        <h1 class="color--skyBlue section__heading--largest">
-          Jun Marcel Fritz<br>
-          <span class="my_title color--darkgrey">Aspiring Cloud Engineer</span><br>
-        </h1>
-        <ul class="section--social">
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top" id="mainNav">
+      <div class="container">
+        <h2 class="navbar-brand js-scroll-trigger section__heading--largest" href="#page-top">Jun Marcel Fritz<br><span class="my_title color--darkgrey">Cloud Developer</span></h2>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span> -->
+        </button>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#example-work">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#training">Training</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
 
-          <!--Links to relevant professional social media & resume -->
-          <!-- See: http://fontawesome.io/icons/#brand for more -->
+    <div class="jumbotron text-white">
+      <div class="container-header">
+        <main class="name-header">
+          <!-- <h2 class="color--skyBlue section__heading--largest">
+            Jun Marcel Fritz<br>
+            <span class="my_title color--darkgrey">Cloud Developer</span><br>
+          </h2> -->
+        </main>
+        <section class="sectionTHREE">
+          <div class="color--darkgrey margin--none section__summary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </div>
+        </section>
+      </div>
+    </div>
 
-          <!-- Link to Linked In profile -->
-          <li class="socialWrapper">
-            <a class="color--skyBlue social"
-               title="LinkedIn Profile"
-               target="_blank"
-               href="https://www.linkedin.com/in/junmarcelfritz/">
-              <i class="fa fa-linkedin"></i>
-            </a>
-          </li>
-
-          <!-- Link to GitHub profile -->
-          <li class="socialWrapper color--skyBlue">
-            <a class="social color--skyBlue"
-               title="GitHub Profile"
-               target="_blank"
-               href="https://github.com/JMFritz">
-              <i class="fa fa-github"></i>
-            </a>
-          </li>
-
-          <!-- Link to resume, probably a .pdf -->
-          <li class="socialWrapper">
-            <a class="social color--skyBlue"
-               title="Resume"
-               href="#">
-              <i class="fa fa-file-text"></i>
-            </a>
-          </li>
-        </ul>
-      </main>
-
-      <section class="background--skyBlue sectionTHREE">
-        <div class="margin--none section__summary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-        </div>
-      </section>
-
+    <div class="containerONE">
       <div id="example-work"></div>
 
-      <section class="background--skyBlue sectionTWO section--description section--alignCentered">
-        <h2>Certifications</h2>
+      <section class="sectionTWO section--description section--alignCentered" id="training">
+        <h2>Training & Certifications</h2><br>
         <div class="certsWrapper">
           <div class="certs">
-            <img class="badge" src="images/SABadge.png" alt="AWS Solution Architect">
+            <img class="badges" src="images/SABadge.png" alt="AWS Solution Architect">
           </div>
         </div>
         <div class="certsWrapper">
           <div class="certs">
-            <img class="badge" src="images/SysOpsBadge.png" alt="AWS SysOps Admin">
+            <img class="badges" src="images/SysOpsBadge.png" alt="AWS SysOps Admin">
           </div>
         </div>
         <div class="certsWrapper">
           <div class="certs">
-            <img class="badge" src="images/DevBadge.png" alt="AWS Developer">
+            <img class="badges" src="images/DevBadge.png" alt="AWS Developer">
+          </div>
+        </div>
+        <div class="eduWrapper">
+          <div class="edu">
+            <img class="acloudlogo" src="images/acloudguru.png" alt="A Cloud Guru">
+          </div>
+        </div>
+        <div class="eduWrapper">
+          <div class="edu">
+            <img class="logo" src="images/epicodus.png" alt="Epicodus Code School">
           </div>
         </div>
       </section>
 
-      <section class="section section--alignCentered section--description">
+      <section class="section section--alignCentered section--description" id="contact">
         <div class="contact-info">
-          <h1 class="brand">Get in Touch</h1>
+          <!-- <h1 class="brand">Get in Touch</h1> -->
           <div class="wrapper">
             <div class="my-info">
-              <h3>Jun Marcel Fritz</h3>
-              <ul>
-                <li><i class="fa fa-road"></i> Address Street</li>
-                <li><i class="fa fa-phone"></i> (808) 722- 6686</li>
-                <li><i class="fa fa-envelope"></i> jun.fritz@gmail.com</li>
-              </ul>
+              <!-- <h3>Jun Marcel Fritz</h3> -->
+              <img class="badges" src="images/SABadge.png" alt="AWS Solution Architect">
+              <hr class="style">
+                <ul>
+                  <li class="socialWrapper">
+                    <a class="color--skyBlue social"
+                       title="Email"
+                       target="_blank"
+                       href="https://www.linkedin.com/in/junmarcelfritz/">
+                      <i class="fa fa-envelope"></i>
+                    </a>
+                  </li>
+                  <li class="socialWrapper">
+                    <a class="color--skyBlue social"
+                       title="LinkedIn Profile"
+                       target="_blank"
+                       href="https://www.linkedin.com/in/junmarcelfritz/">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li class="socialWrapper color--skyBlue">
+                    <a class="social color--skyBlue"
+                       title="GitHub Profile"
+                       target="_blank"
+                       href="https://github.com/JMFritz">
+                      <i class="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li class="socialWrapper">
+                    <a class="social color--skyBlue"
+                       title="Resume"
+                       href="#">
+                      <i class="fa fa-file-text"></i>
+                    </a>
+                  </li>
+                </ul>
             </div>
             <div class="contact">
               <form id="myForm">
@@ -164,5 +194,9 @@
       </section>
     </div>
     <script type="text/javascript" src="dist/bundle.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
   </body>
 </html>

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/JMFritz/Serverless-Portfolio-Jun#readme",
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

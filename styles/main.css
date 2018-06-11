@@ -1,23 +1,23 @@
 .background--skyBlue {
-  background-color: rgba(52, 152, 219,0.1);
+  background-color: #dfe9ec;
 }
 .background--modal {
   background-color: black;
 }
 .color--skyBlue {
-  color: rgb(52, 152, 219);
+  color: orange;
 }
 .color--cloud {
   color: rgb(236, 240, 241);
 }
 .color--grey {
-  color: rgba(127, 140, 141,0.5);
+  color: white;
 }
 .color--darkgrey{
-  color: rgba(44, 62, 80,0.5);
+  color: white;
 }
 .project {
-  background-color: rgba(44, 62, 80,0.5);
+  background-color: rgb(236, 240, 241);
 }
 
 /*
@@ -26,13 +26,14 @@
     through parent containers
 */
 html {
-  font-size: 50%;
+  /* font-size: 50%; */
 }
 body {
   font-family: 'Cardo', serif;
   margin: 0;
+  /* background-color: black; */
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, li {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .1rem;
 }
@@ -43,13 +44,10 @@ h1, h2, h3, h4, h5, h6 {
 .margin--none {
   margin: 0;
 }
-.overflow--auto {
-  overflow: auto;
-  height: 12rem
-}
-.container {
+.containerONE {
   margin: auto;
   width: 75%;
+  /* background-color: #121b1e; */
 }
 
 /*
@@ -64,9 +62,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sectionTWO {
   font-size: 4.2rem;
-  min-height: 30vh;
+  min-height: 50vh;
   position: relative;
-  padding-top: 5rem;
+  padding-top: 7.5rem;
   padding-bottom: 5rem;
   vertical-align: middle;
 }
@@ -100,38 +98,61 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   margin: 1rem;
 }
-.projectWrapper,
+
+/*
+Projects
+*/
 .project {
-  display: inline-block;
-  height: 25rem;
-  width: 25rem;
-}
-.projectWrapper {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.project {
-  /* border-radius: 100%; */
+  height: 30rem;
+  max-width: 100%;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-}
-.projectTitle{
-  font-size: 3.4rem;
-  text-align: center;
-  text-transform: uppercase;
-  width: 90%;
+  margin: 20px;
+  background-color: white;
 }
 .projectImage {
-  opacity: 0.25;
-  width: 250%;
-  margin-left: -50%;
-  margin-top: -50%;
+  margin-right: 15px;
+  float: left;
+  width: 30rem;
+}
+.projectDesc {
+  font-size: 2rem;
+}
+.projectTitle {
+  font-size: 3rem;
+}
+hr.style {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
 /*
   Header
 */
+
+.navbar {
+  background-color: black;
+  color: orange;
+  height: 100px;
+}
+.container-header {
+  /* background-color: black; */
+}
+.jumbotron {
+  padding-left: 20rem;
+  padding-right: 20rem;
+  /* background-color:transparent !important;
+  color: inherit; */
+  background-color: black;
+}
+.name-header {
+  height: 12rem;
+}
 .section__heading--largest {
   float: left;
   font-size: 3rem;
@@ -140,16 +161,13 @@ h1, h2, h3, h4, h5, h6 {
 .my_title {
   font-size: 1.5rem;
 }
-.section--social {
-  float: right;
+.section--social ul {
   line-height: 10rem;
-  margin-right: 2rem;
+  list-style: inside;
+  margin: auto;
 }
 .social {
-  margin-right: 0.75rem;
-}
-.socialWrapper:last-child .social {
-  margin-right: 0;
+  margin: .5rem;
 }
 .socialWrapper {
   display: inline-block;
@@ -159,31 +177,51 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   vertical-align: middle;
 }
-
-
-
-
-
-
 .certsWrapper,
 .certs {
   display: inline-block;
   height: 15rem;
   width: 15rem;
 }
-.certsWrapper {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.certsWrapper, .eduWrapper {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
-.certs {
+.certs, .edu {
   /* border-radius: 100%; */
   cursor: pointer;
   overflow: hidden;
   position: relative;
 }
-.badge {
+.badges {
   width: 15rem;
   height: 15rem;
+}
+.logo {
+  height: 80px;
+  width: 160px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.acloudlogo {
+  height: 100px;
+  width: 160px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.eduWrapper,
+.edu {
+  display: inline-block;
+  height: 15rem;
+  width: 20rem;
 }
 /*
 *{
@@ -212,13 +250,21 @@ ul {
   padding: 1em;
 }
 .my-info {
-  background-color: rgba(52, 152, 219,0.1);
-}
-.my-info h3, .my-info ul{
+  background-color: black;
+  color: orange;
+  font-size: 1.5rem;
   text-align: center;
-  margin: 0 0 1rem 0;
 }
-
+.my-info h3 {
+  width: 100%;
+  margin: auto;
+}
+.my-info ul{
+  display: inline-table;
+}
+.my-info li{
+  display: inline;
+}
 .contact {
   background: #f9feff;
 }

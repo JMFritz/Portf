@@ -49,15 +49,16 @@ class ExampleWorkBubble extends React.Component {
   render() {
     let example = this.props.example;
     return (
-      <div className="projectWrapper"
-        onClick={ (evt) => this.props.openModal(evt, example) }>
-        <div className="project">
-          <img alt={ example.image.desc }
-            className="projectImage"
-            src={ example.image.src }/>
-          <h1 className="project-title">{ example.title }</h1>
-        </div>
-      </div>
+        <span>
+          <div className="project">
+            <img alt={ example.image.desc }
+              className="projectImage"
+              src={ example.image.src } onClick={ (evt) => this.props.openModal(evt, example) }/>
+            <h1 className="projectTitle">{ example.title }</h1>
+            <p className="projectDesc">Lorem sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <hr className="style"/>
+        </span>
     )
   }
 }
