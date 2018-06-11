@@ -21,6 +21,8 @@
   "homepage": "https://github.com/JMFritz/Serverless-Portfolio-Jun#readme",
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "jquery-easing": "0.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
