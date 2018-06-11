@@ -31,6 +31,7 @@ html {
 body {
   font-family: 'Cardo', serif;
   margin: 0;
+
   /* background-color: black; */
 }
 h1, h2, h3, h4, h5, h6, li {
@@ -49,6 +50,9 @@ h1, h2, h3, h4, h5, h6, li {
   width: 75%;
   /* background-color: #121b1e; */
 }
+.container {
+  max-width: 200vh;
+}
 
 /*
   Sections
@@ -64,13 +68,13 @@ h1, h2, h3, h4, h5, h6, li {
   font-size: 4.2rem;
   min-height: 50vh;
   position: relative;
-  padding-top: 7.5rem;
+  padding-top: 5rem;
   padding-bottom: 5rem;
   vertical-align: middle;
 }
 .sectionTHREE {
-  font-size: 4.2rem;
-  min-height: 20vh;
+  font-size: 3.2rem;
+  min-height: 40vh;
   position: relative;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -90,13 +94,17 @@ h1, h2, h3, h4, h5, h6, li {
   width: 50%;
 }
 .section__summary {
-  font-size: 2rem;
+  font-size: 1.5rem;
   min-width: 30rem;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 1rem;
+  text-align: center;
+}
+h1.position {
+  color: darkorange;
 }
 
 /*
@@ -113,11 +121,10 @@ Projects
 }
 .projectImage {
   margin-right: 15px;
-  float: left;
-  width: 30rem;
+  width: 20rem;
 }
 .projectDesc {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .projectTitle {
   font-size: 3rem;
@@ -130,33 +137,43 @@ hr.style {
   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
+hr.style-four {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 /*
   Header
 */
 
 .navbar {
-  background-color: black;
+  background-color: #0C0C0C;
   color: orange;
-  height: 100px;
+  height: 80px;
 }
-.container-header {
-  /* background-color: black; */
+.navbar h2 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.nav-item a {
+  font-size: 1.5rem;
+  color: white;
+}
+.nav-item a:hover{
+  color: darkorange;
 }
 .jumbotron {
   padding-left: 20rem;
   padding-right: 20rem;
-  /* background-color:transparent !important;
-  color: inherit; */
-  background-color: black;
+  background-image: url('../images/dark-clouds2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .name-header {
-  height: 12rem;
-}
-.section__heading--largest {
-  float: left;
-  font-size: 3rem;
-  margin-left: 2rem;
+  height: 10rem;
 }
 .my_title {
   font-size: 1.5rem;
@@ -180,8 +197,8 @@ hr.style {
 .certsWrapper,
 .certs {
   display: inline-block;
-  height: 15rem;
-  width: 15rem;
+  height: 11rem;
+  width: 11rem;
 }
 .certsWrapper, .eduWrapper {
   margin-left: 1rem;
@@ -194,12 +211,12 @@ hr.style {
   position: relative;
 }
 .badges {
-  width: 15rem;
-  height: 15rem;
+  width: 10rem;
+  height: 10rem;
 }
 .logo {
-  height: 80px;
-  width: 160px;
+  height: 60px;
+  width: 120px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -208,8 +225,8 @@ hr.style {
   margin: auto;
 }
 .acloudlogo {
-  height: 100px;
-  width: 160px;
+  height: 70px;
+  width: 120px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -235,7 +252,11 @@ hr.style {
   padding: 1em;
   font-size: 80%;
 }
-
+.profileImage {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -243,14 +264,14 @@ ul {
 .brand {
   text-align: center;
 }
-.wrapper {
+/* .wrapper {
   box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
-}
+} */
 .wrapper > * {
   padding: 1em;
 }
 .my-info {
-  background-color: black;
+  background-color: white;
   color: orange;
   font-size: 1.5rem;
   text-align: center;
@@ -266,7 +287,7 @@ ul {
   display: inline;
 }
 .contact {
-  background: #f9feff;
+  background: white;
 }
 
 .contact form{
@@ -289,7 +310,7 @@ ul {
   width: 100%;
   height: 3rem;
   border: 1px solid #c9e6ff;
-  font-size: 90%;
+  font-size: 70%;
 }
 .contact form button{
   background: #c9e6ff;
@@ -303,7 +324,7 @@ ul {
   transition: background-color 2s ease-out;
 }
 
-@media(min-width: 800px){
+@media(min-width: 850px){
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -315,6 +336,98 @@ ul {
   .my-info h3, .my-info ul, .brand{
     text-align: left;
   }
+  .project {
+    height: 30rem;
+    max-width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    background-color: white;
+  }
+  .projectImage {
+    margin-right: 15px;
+    float: left;
+    width: 30rem;
+  }
+  .projectDesc {
+    font-size: 2rem;
+  }
+  .projectTitle {
+    font-size: 3.5rem;
+  }
+  .certsWrapper,
+  .certs {
+    display: inline-block;
+    height: 15rem;
+    width: 15rem;
+  }
+  .certsWrapper, .eduWrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .certs, .edu {
+    /* border-radius: 100%; */
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+  .badges {
+    width: 15rem;
+    height: 15rem;
+  }
+  .logo {
+    height: 80px;
+    width: 160px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .acloudlogo {
+    height: 100px;
+    width: 160px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .trainingSection {
+    max-width: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section__summary {
+    font-size: 1.5rem;
+    min-width: 60rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 1rem;
+  }
+  /* .navbar {
+    background-color: #0C0C0C;
+    color: orange;
+    height: 80px;
+  }
+  .navbar h2 {
+    margin-top: 0;
+    font-size: 3rem;
+  }
+  .nav-item a {
+    display: inline;
+    min-width: 200rem;
+    font-size: 1.2rem;
+    color: white;
+  }
+  .nav-item a:hover{
+    color: darkorange;
+  } */
 }
 
 /*
@@ -328,7 +441,7 @@ ul {
 .modal--open {
   display: block;
   position: fixed;
-  top: 0;
+  top: 80px;
   right: 0;
   left: 0;
   bottom: 0;

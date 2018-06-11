@@ -37,7 +37,7 @@
                         'body': fullMessage
                     }),
                     success: function(res){
-                        $('#form-response').text('Email was sent.');
+                        $('#form-response').text('Thank you for reaching out!');
                     },
                     error: function(){
                         $('#form-response').text('Error.');
@@ -53,21 +53,20 @@
   <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-fixed-top" id="mainNav">
       <div class="container">
-        <h2 class="navbar-brand js-scroll-trigger section__heading--largest" href="#page-top">Jun Marcel Fritz<br><span class="my_title color--darkgrey">Cloud Developer</span></h2>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span> -->
-        </button>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#example-work">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#training">Training</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
+        <h2 class="navbar-brand js-scroll-trigger" href="#page-top">Jun Marcel Fritz<br><span class="my_title color--darkgrey">Cloud Developer</span></h2>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#example-work"> Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#training">Training</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+
       </div>
     </nav>
 
@@ -81,7 +80,9 @@
         </main>
         <section class="sectionTHREE">
           <div class="color--darkgrey margin--none section__summary">
+            <h1 class="position">Cloud Developer</h1>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+              <hr>
           </div>
         </section>
       </div>
@@ -91,108 +92,110 @@
       <div id="example-work"></div>
 
       <section class="sectionTWO section--description section--alignCentered" id="training">
-        <h2>Training & Certifications</h2><br>
-        <div class="certsWrapper">
-          <div class="certs">
-            <img class="badges" src="images/SABadge.png" alt="AWS Solution Architect">
-          </div>
-        </div>
-        <div class="certsWrapper">
-          <div class="certs">
-            <img class="badges" src="images/SysOpsBadge.png" alt="AWS SysOps Admin">
-          </div>
-        </div>
-        <div class="certsWrapper">
-          <div class="certs">
-            <img class="badges" src="images/DevBadge.png" alt="AWS Developer">
-          </div>
-        </div>
-        <div class="eduWrapper">
-          <div class="edu">
-            <img class="acloudlogo" src="images/acloudguru.png" alt="A Cloud Guru">
-          </div>
-        </div>
-        <div class="eduWrapper">
-          <div class="edu">
-            <img class="logo" src="images/epicodus.png" alt="Epicodus Code School">
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--alignCentered section--description" id="contact">
-        <div class="contact-info">
-          <!-- <h1 class="brand">Get in Touch</h1> -->
-          <div class="wrapper">
-            <div class="my-info">
-              <!-- <h3>Jun Marcel Fritz</h3> -->
+        <div class="trainingSection">
+          <h2>Training & Certifications</h2><br>
+          <div class="certsWrapper">
+            <div class="certs">
               <img class="badges" src="images/SABadge.png" alt="AWS Solution Architect">
-              <hr class="style">
-                <ul>
-                  <li class="socialWrapper">
-                    <a class="color--skyBlue social"
-                       title="Email"
-                       target="_blank"
-                       href="https://www.linkedin.com/in/junmarcelfritz/">
-                      <i class="fa fa-envelope"></i>
-                    </a>
-                  </li>
-                  <li class="socialWrapper">
-                    <a class="color--skyBlue social"
-                       title="LinkedIn Profile"
-                       target="_blank"
-                       href="https://www.linkedin.com/in/junmarcelfritz/">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </li>
-                  <li class="socialWrapper color--skyBlue">
-                    <a class="social color--skyBlue"
-                       title="GitHub Profile"
-                       target="_blank"
-                       href="https://github.com/JMFritz">
-                      <i class="fa fa-github"></i>
-                    </a>
-                  </li>
-                  <li class="socialWrapper">
-                    <a class="social color--skyBlue"
-                       title="Resume"
-                       href="#">
-                      <i class="fa fa-file-text"></i>
-                    </a>
-                  </li>
-                </ul>
             </div>
-            <div class="contact">
-              <form id="myForm">
-                <p>
-                  <label for="name">Name</label>
-                  <input id="name" required>
-                </p>
-                <p>
-                  <label for="email">Email</label>
-                  <input id="email" type="email" required>
-                </p>
-                <p>
-                  <label for="subject">Subject</label>
-                  <input id="subject" required>
-                </p>
-                <p>
-                  <label for="phone">Phone Number</label>
-                  <input id="phone" required>
-                </p>
-                <p class="full">
-                  <label for="message">Message</label>
-                  <textarea id="message" rows="5" required></textarea>
-                </p>
-                <p class="full">
-                  <button id="submit">Submit</button>
-                </p>
-              </form>
+          </div>
+          <div class="certsWrapper">
+            <div class="certs">
+              <img class="badges" src="images/SysOpsBadge.png" alt="AWS SysOps Admin">
+            </div>
+          </div>
+          <div class="certsWrapper">
+            <div class="certs">
+              <img class="badges" src="images/DevBadge.png" alt="AWS Developer">
+            </div>
+          </div>
+          <div class="eduWrapper">
+            <div class="edu">
+              <img class="acloudlogo" src="images/acloudguru.png" alt="A Cloud Guru">
+            </div>
+          </div>
+          <div class="eduWrapper">
+            <div class="edu">
+              <img class="logo" src="images/epicodus.png" alt="Epicodus Code School">
             </div>
           </div>
         </div>
-        <div id="form-response"></div>
       </section>
     </div>
+    <hr class="style-four">
+    <section class="section section--alignCentered section--description" id="contact">
+      <div class="contact-info">
+        <!-- <h1 class="brand">Get in Touch</h1> -->
+        <div class="wrapper">
+          <div class="my-info">
+            <!-- <h3>Jun Marcel Fritz</h3> -->
+            <img class="profileImage" src="https://picsum.photos/200/300/?random" alt="Jun Marcel Fritz">
+            <!-- <hr class="style"> -->
+            <ul>
+              <li class="socialWrapper">
+                <a class="color--skyBlue social"
+                title="Email"
+                target="_blank"
+                href="https://www.linkedin.com/in/junmarcelfritz/">
+                <i class="fa fa-envelope"></i>
+              </a>
+            </li>
+            <li class="socialWrapper">
+              <a class="color--skyBlue social"
+              title="LinkedIn Profile"
+              target="_blank"
+              href="https://www.linkedin.com/in/junmarcelfritz/">
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="socialWrapper color--skyBlue">
+            <a class="social color--skyBlue"
+            title="GitHub Profile"
+            target="_blank"
+            href="https://github.com/JMFritz">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+        <li class="socialWrapper">
+          <a class="social color--skyBlue"
+          title="Resume"
+          href="#">
+          <i class="fa fa-file-text"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="contact">
+    <form id="myForm">
+      <p>
+        <!-- <label for="name">Name</label> -->
+        <input id="name" placeholder="Name"required>
+      </p>
+      <p>
+        <!-- <label for="email">Email</label> -->
+        <input id="email" placeholder="Email" type="email" required>
+      </p>
+      <p>
+        <!-- <label for="phone">Phone Number</label> -->
+        <input id="phone" placeholder="Phone Number" required>
+      </p>
+      <p>
+        <!-- <label for="subject">Subject</label> -->
+        <input id="subject" placeholder="Subject" required>
+      </p>
+      <p class="full">
+        <!-- <label for="message">Message</label> -->
+        <textarea id="message" rows="5" placeholder="Your Message"required></textarea>
+      </p>
+      <p class="full">
+        <button id="submit">Submit</button>
+      </p>
+    </form>
+  </div>
+</div>
+</div>
+<div id="form-response"></div>
+</section>
     <script type="text/javascript" src="dist/bundle.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
