@@ -31,12 +31,14 @@ html {
 body {
   font-family: 'Cardo', serif;
   margin: 0;
-
-  /* background-color: black; */
 }
 h1, h2, h3, h4, h5, h6, li {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .1rem;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .2rem;
 }
 
 /*
@@ -109,7 +111,7 @@ h1.position {
 Projects
 */
 .project {
-  height: 30rem;
+  height: 20rem;
   max-width: 100%;
   cursor: pointer;
   overflow: hidden;
@@ -118,15 +120,35 @@ Projects
   background-color: white;
 }
 .projectImage {
-  margin-right: 15px;
-  width: 20rem;
+  display: none;
 }
 .projectDesc {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .projectTitle {
   font-size: 3rem;
 }
+.projectInfo {
+  float:right;
+  width: 40rem;
+}
+.toolSection {
+  width: 40rem;
+  float: right;
+}
+.toolSection .tool{
+  display: inline-table;
+  background-color: orange;
+  color: white;
+  font-weight: bolder;
+  padding: .3rem;
+  margin: .2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  max-width: 200px;
+  max-height: 50px;
+}
+
 hr.style {
   border: 0;
   height: 1px;
@@ -240,16 +262,11 @@ hr.style-four {
   height: 15rem;
   width: 20rem;
 }
-/*
-*{
-  box-sizing: border-box;
-} */
 
 .contact-info {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1em;
   font-size: 80%;
 }
 .profileImage {
@@ -260,13 +277,12 @@ hr.style-four {
 ul {
   list-style: none;
   padding: 0;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 .brand {
   text-align: center;
 }
-/* .wrapper {
-  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
-} */
 .wrapper > * {
   padding: 1em;
 }
@@ -279,6 +295,7 @@ ul {
 .my-info h3 {
   width: 100%;
   margin: auto;
+  padding-top: 2rem;
 }
 .my-info ul{
   display: inline-table;
@@ -306,22 +323,29 @@ ul {
 .contact form .full{
   grid-column: 1 / 3;
 }
-.contact form button, .contact form input, .contact form textarea{
+.contact form button, .contact form input {
   width: 100%;
   height: 3rem;
-  border: 1px solid #c9e6ff;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 70%;
+}
+.contact form textarea {
+  width: 100%;
+  height: 10rem;
+  border-bottom: 1px solid black;
   font-size: 70%;
 }
 .contact form button{
-  background: #c9e6ff;
+  background: orange;
   border: 0;
 }
 
 .contact form button:hover, contact form button:focus {
-  background: #92bde7;
+  background: #0C0C0C;
   color: #fff;
   outline: 0;
-  transition: background-color 2s ease-out;
+  transition: background-color .5s ease-out;
 }
 
 @media(min-width: 850px){
@@ -333,28 +357,66 @@ ul {
   .wrapper > *{
     padding: 2em;
   }
+  .sectionTWO {
+    font-size: 4.2rem;
+    min-height: 50vh;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    vertical-align: middle;
+    max-width: 100rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .my-info h3, .my-info ul, .brand{
     text-align: left;
   }
   .project {
-    height: 30rem;
+    height: 25rem;
     max-width: 100%;
     cursor: pointer;
     overflow: hidden;
     position: relative;
     margin: 20px;
+    padding-bottom: 0;
     background-color: white;
   }
   .projectImage {
+    display: inherit;
     margin-right: 15px;
     float: left;
     width: 30rem;
   }
+  .projectImage:hover {
+    -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(75%);
+  }
   .projectDesc {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
   }
   .projectTitle {
     font-size: 3.5rem;
+  }
+  .projectInfo {
+    float:right;
+    width: 40rem;
+  }
+  .toolSection {
+    width: 40rem;
+    float: right;
+  }
+  .toolSection .tool{
+    display: inline-table;
+    background-color: orange;
+    color: white;
+    font-weight: bolder;
+    padding: .3rem;
+    margin: .2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    max-width: 200px;
+    max-height: 50px;
   }
   .certsWrapper,
   .certs {
@@ -417,6 +479,10 @@ ul {
   }
   .nav-item a:hover{
     color: darkorange;
+  }
+  .title-size{
+    font-size: 5rem;
+    font-weight: bolder;
   }
 }
 

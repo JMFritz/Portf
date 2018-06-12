@@ -28,9 +28,9 @@ class ExampleWork extends React.Component {
   }
   render() {
     return(
-      <span>
+      <span id="projects">
+      <h1 className="title-size">Projects</h1>
         <section className="sectionTWO section--alignCentered section--description">
-
           { this.props.work.map( (example, idx) => {
               return (
                 <ExampleWorkBubble example={example} key={idx} openModal={this.openModal}/>
@@ -48,14 +48,25 @@ class ExampleWork extends React.Component {
 class ExampleWorkBubble extends React.Component {
   render() {
     let example = this.props.example;
+    let tools = this.props.example.tools;
     return (
         <span>
           <div className="project">
+            <div className="projectInfo">
+                <h1 className="projectTitle">{ example.title }</h1>
+                <p className="projectDesc">{ example.summary }</p>
+                <div className="toolSection">
+                { tools.map((tool) => {
+                  return(
+                    <p className="tool">{ tool }</p>
+                  )
+                })
+              }
+              </div>
+            </div>
             <img alt={ example.image.desc }
-              className="projectImage"
-              src={ example.image.src } onClick={ (evt) => this.props.openModal(evt, example) }/>
-            <h1 className="projectTitle">{ example.title }</h1>
-            <p className="projectDesc">Lorem sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            className="projectImage"
+            src={ example.image.src } onClick={ (evt) => this.props.openModal(evt, example) }/>
           </div>
           <hr className="style"/>
         </span>

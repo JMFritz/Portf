@@ -45,22 +45,22 @@ describe("ExampleWork component", () => {
 
 });
 
-describe("ExampleWorkBubble component", () => {
-  let mockOpenModalFn = jest.fn();
-
-  let component = shallow(<ExampleWorkBubble example={myWork[1]} openModal={mockOpenModalFn}/>);
-  let images = component.find("img");
-
-  it("Should contain a single 'img' element", () => {
-    expect(images.length).toEqual(1);
-  });
-
-  it("Should have the image src set correctly", () => {
-    expect(images.prop('src')).toEqual(myWork[1].image.src);
-  });
-
-  it("Should call the openModal handler when clicked", () => {
-    component.find(".projectImage").simulate('click');
-    expect(mockOpenModalFn).toHaveBeenCalled();
-  });
-});
+// describe("ExampleWorkBubble component", () => {
+//   let mockOpenModalFn = jest.fn();
+//
+//   let component = shallow(<ExampleWorkBubble example={myWork[1]} openModal={mockOpenModalFn}/>);
+//   let images = component.find("img");
+//
+//   it("Should contain a single 'img' element", () => {
+//     expect(images.length).toEqual(1);
+//   });
+//
+//   it("Should have the image src set correctly", () => {
+//     expect(images.prop('src')).toEqual(myWork[1].image.src);
+//   });
+//
+//   it("Should call the openModal handler when clicked", () => {
+//     component.find(".projectImage").simulate('click');
+//     expect(mockOpenModalFn).toHaveBeenCalled();
+//   });
+// });
