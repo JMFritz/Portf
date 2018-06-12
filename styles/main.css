@@ -2,7 +2,7 @@
   background-color: #dfe9ec;
 }
 .background--modal {
-  background-color: black;
+  background: rgba(0, 0, 0, 0.9);
 }
 .color--skyBlue {
   color: orange;
@@ -32,7 +32,7 @@ body {
   font-family: 'Cardo', serif;
   margin: 0;
 }
-h1, h2, h3, h4, h5, h6, li {
+h1, h2, h3, h4, h5, h6, li, a {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .1rem;
 }
@@ -200,6 +200,9 @@ hr.style-four {
 .my_title {
   font-size: 1.5rem;
 }
+p.my-summary {
+  font-size: 1.4rem;
+}
 .section--social ul {
   line-height: 10rem;
   list-style: inside;
@@ -288,7 +291,7 @@ ul {
 }
 .my-info {
   background-color: white;
-  color: orange;
+  color: black;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -302,6 +305,9 @@ ul {
 }
 .my-info li{
   display: inline;
+}
+.my-info i{
+  color: #0C0C0C;
 }
 .contact {
   background: white;
@@ -353,7 +359,6 @@ ul {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
-
   .wrapper > *{
     padding: 2em;
   }
@@ -383,13 +388,11 @@ ul {
   }
   .projectImage {
     display: inherit;
-    margin-right: 15px;
     float: left;
     width: 30rem;
   }
-  .projectImage:hover {
-    -webkit-filter: grayscale(75%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(75%);
+  .projectTitle:hover {
+    color: orange;
   }
   .projectDesc {
     font-size: 1.2rem;
@@ -489,7 +492,9 @@ ul {
 /*
   Modal
 */
-
+.main-modal {
+  padding-top: 5rem;
+}
 .modal--closed {
   display: none;
 }
@@ -508,18 +513,18 @@ ul {
 
 .modal__closeButton {
   position: absolute;
-  right: 2rem;
+  right: 15rem;
   top: 5rem;
   font-size: 4rem;
   z-index: 1;
-  curson: pointer;
+  cursor: pointer;
 }
 
 .modal__text {
-  position: absolute;
   top: 0;
-  left: 0;
-  font-size: 2.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
   padding: 2rem;
   width: 66%;
 }
@@ -528,10 +533,11 @@ ul {
   background-color: white;
   border-radius: 4px;
   padding: 0.4rem 1rem;
-  text-transform: uppercase;
   text-decoration: none;
 }
-
-.modal__image {
-  opacity: 0.2;
+.modal__description {
+  margin-top: 4rem;
+}
+.modal__title {
+  margin-bottom: 3rem;
 }

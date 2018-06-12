@@ -7,7 +7,7 @@ class ExampleWorkModal extends React.Component {
     let modalClass = this.props.open ? 'modal--open' : 'modal--closed';
 
     return (
-      <div className={"background--modal " + modalClass}>
+      <div className={"main-modal background--modal " + modalClass}>
         <span className="color--cloud modal__closeButton"
           onClick={this.props.closeModal}>
           <i className="fa fa-window-close-o"></i>
@@ -18,7 +18,7 @@ class ExampleWorkModal extends React.Component {
           </h2>
           <a className="color--skyBlue modal__link"
              href={ example.href }>
-            Check it out
+            View Source
           </a>
           <p className="modal__description">
             { example.desc }

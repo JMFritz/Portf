@@ -53,7 +53,7 @@ class ExampleWorkBubble extends React.Component {
         <span>
           <div className="project">
             <div className="projectInfo">
-                <h1 className="projectTitle">{ example.title }</h1>
+                <h1 className="projectTitle" onClick={ (evt) => this.props.openModal(evt, example) }>{ example.title }</h1>
                 <p className="projectDesc">{ example.summary }</p>
                 <div className="toolSection">
                 { tools.map((tool) => {
@@ -66,7 +66,7 @@ class ExampleWorkBubble extends React.Component {
             </div>
             <img alt={ example.image.desc }
             className="projectImage"
-            src={ example.image.src } onClick={ (evt) => this.props.openModal(evt, example) }/>
+            src={ example.image.src }/>
           </div>
           <hr className="style"/>
         </span>
