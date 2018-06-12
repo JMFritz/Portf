@@ -64,9 +64,6 @@ class ExampleWorkBubble extends React.Component {
               }
               </div>
             </div>
-            <img alt={ example.image.desc }
-            className="projectImage"
-            src={ example.image.src }/>
           </div>
           <hr className="style"/>
         </span>
