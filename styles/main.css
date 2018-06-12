@@ -48,10 +48,8 @@ h1, h2, h3, h4, h5, h6, li {
 .containerONE {
   margin: auto;
   width: 75%;
+  text-align: center;
   /* background-color: #121b1e; */
-}
-.container {
-  max-width: 200vh;
 }
 
 /*
@@ -69,7 +67,7 @@ h1, h2, h3, h4, h5, h6, li {
   min-height: 50vh;
   position: relative;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   vertical-align: middle;
 }
 .sectionTHREE {
@@ -156,11 +154,13 @@ hr.style-four {
 .navbar h2 {
   margin-top: 0;
   font-size: 3rem;
+  float: left;
 }
-
 .nav-item a {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
+  display: inline;
+  margin-right: 1.5rem;
 }
 .nav-item a:hover{
   color: darkorange;
@@ -410,24 +410,14 @@ ul {
     transform: translate(-50%, -50%);
     margin: 1rem;
   }
-  /* .navbar {
-    background-color: #0C0C0C;
-    color: orange;
-    height: 80px;
-  }
-  .navbar h2 {
-    margin-top: 0;
-    font-size: 3rem;
-  }
   .nav-item a {
-    display: inline;
-    min-width: 200rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: white;
+    margin-right: 2rem;
   }
   .nav-item a:hover{
     color: darkorange;
-  } */
+  }
 }
 
 /*
