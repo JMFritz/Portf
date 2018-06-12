@@ -15,4 +15,5 @@ artifacts:
     - styles/main.css
     - images/*
     - vendor/*
+    - js/*
     - dist/bundle.js
