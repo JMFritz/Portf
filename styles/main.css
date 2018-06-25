@@ -17,7 +17,7 @@
   color: white;
 }
 .project {
-  background-color: rgb(236, 240, 241);
+  background-color: white;
 }
 
 /*
@@ -31,6 +31,7 @@ html {
 body {
   font-family: 'Cardo', serif;
   margin: 0;
+  background-color: white;
 }
 h1, h2, h3, h4, h5, h6, li, a {
   font-family: 'Montserrat', sans-serif;
@@ -68,7 +69,7 @@ p {
   font-size: 4.2rem;
   min-height: 50vh;
   position: relative;
-  padding-top: 5rem;
+  padding-top: 0rem;
   padding-bottom: 2rem;
   vertical-align: middle;
 }
@@ -118,7 +119,7 @@ Projects
   position: relative;
   margin: 20px;
   background-color: white;
-  background-image: url("../images/placeholder.jpg");
+  /* background-image: url("../images/placeholder.jpg"); */
 }
 .projectDesc {
   font-size: 1rem;
@@ -130,6 +131,7 @@ Projects
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   width: 40rem;
   margin: 0 auto;
 }
@@ -142,7 +144,7 @@ Projects
   font-size: 1rem;
   border-radius: 5px;
   max-width: 200px;
-  max-height: 50px;
+  max-height: 100px;
   text-align: center;
 }
 
@@ -208,6 +210,9 @@ p.my-summary {
 .social {
   margin: .5rem;
 }
+.fa:hover {
+  color: orange;
+}
 .socialWrapper {
   display: inline-block;
   font-size: 3rem;
@@ -264,6 +269,7 @@ p.my-summary {
   margin-left: auto;
   margin-right: auto;
   font-size: 80%;
+  background-color: white;
 }
 .profileImage {
   width: 20rem;
@@ -359,7 +365,7 @@ ul {
     font-size: 4.2rem;
     min-height: 50vh;
     position: relative;
-    padding-top: 5rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
     vertical-align: middle;
     max-width: 100rem;
@@ -370,7 +376,7 @@ ul {
     text-align: left;
   }
   .project {
-    height: 25rem;
+    min-height: 20rem;
     max-width: 100%;
     cursor: pointer;
     overflow: hidden;
@@ -378,7 +384,7 @@ ul {
     margin: 20px;
     padding-bottom: 0;
     background-color: white;
-    background-image: url('../images/placeholder.jpg');
+    /* background-image: url('../images/placeholder.jpg'); */
   }
   .projectImage {
     display: relative;
@@ -408,6 +414,8 @@ ul {
     color: white;
     font-weight: bolder;
     padding: .3rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
     margin: .2rem;
     font-size: 1rem;
     border-radius: 5px;
@@ -477,8 +485,8 @@ ul {
     color: darkorange;
   }
   .title-size{
-    font-size: 4rem;
-    font-weight: bolder;
+    font-size: 5rem;
+    font-weight: 1000;
   }
 }
 
@@ -527,10 +535,16 @@ ul {
   border-radius: 4px;
   padding: 0.4rem 1rem;
   text-decoration: none;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .modal__description {
   margin-top: 4rem;
 }
 .modal__title {
   margin-bottom: 3rem;
+}
+
+.title-size{
+  font-weight: 1000;
 }
