@@ -272,9 +272,7 @@ p.my-summary {
   background-color: white;
 }
 .profileImage {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 100%;
+  border-radius: 5px;
 }
 ul {
   list-style: none;
